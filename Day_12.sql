@@ -26,4 +26,5 @@ select
     round(avg(patient_satisfaction), 1) as avg_patient_satisfaction,
     round(avg(staff_morale), 1) as avg_staff_morale
 from services_weekly
-group by event_status;
+group by event_status
+order by avg_patient_satisfaction desc;
